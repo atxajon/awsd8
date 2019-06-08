@@ -23,7 +23,7 @@ core/UPDATE.txt
 
 # Core's dependencies are managed with Composer.
 #/vendor
-#vendor
+vendor
 
 # Ignore configuration files that may contain sensitive information.
 sites/*/settings*.php
