@@ -1,0 +1,14 @@
+uuid: 9ec92b3b-795e-40e1-a3cb-347796238126
+name: 'awsd8 local site'
+mail: atxajon@gmail.com
+slogan: 'Where i am going to sync my local config into live'
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yTxtFqBHnEWxQswuWvkjE8mKw2t8oKuCL1q8KnfHuGE
