@@ -4,13 +4,18 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitc69050299f61ebe269508b29e7cb824b
+class ComposerStaticInit9e47a19e865e200aea498ca8215c26de
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
-        '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
         '5255c38a0faeba867671b61dfda6d864' => __DIR__ . '/..' . '/paragonie/random_compat/lib/random.php',
         '023d27dca8066ef29e6739335ea73bad' => __DIR__ . '/..' . '/symfony/polyfill-php70/bootstrap.php',
+        '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
+        '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
+        'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
+        'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
+        '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
+        'def43f6c87e4f8dfd0c9e1b1bab14fe8' => __DIR__ . '/..' . '/symfony/polyfill-iconv/bootstrap.php',
         'cf97c57bfe0f23854afd2f3818abb7a0' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/functions/create_uploaded_file.php',
         '9bf37a3d0dad93e29cb4e1b1bfab04e9' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/functions/marshal_headers_from_sapi.php',
         'ce70dccb4bcc2efc6e94d2ee526e6972' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/functions/marshal_method_from_sapi.php',
@@ -19,11 +24,6 @@ class ComposerStaticInitc69050299f61ebe269508b29e7cb824b
         '0b0974a5566a1077e4f2e111341112c1' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/functions/normalize_server.php',
         '1ca3bc274755662169f9629d5412a1da' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/functions/normalize_uploaded_files.php',
         '40360c0b9b437e69bcbb7f1349ce029e' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/functions/parse_cookie_header.php',
-        '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
-        'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
-        'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
-        '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
-        'def43f6c87e4f8dfd0c9e1b1bab14fe8' => __DIR__ . '/..' . '/symfony/polyfill-iconv/bootstrap.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -88,7 +88,6 @@ class ComposerStaticInitc69050299f61ebe269508b29e7cb824b
             'Drupal\\Component\\' => 17,
             'DrupalComposer\\DrupalScaffold\\' => 30,
             'Doctrine\\Common\\Inflector\\' => 26,
-            'Doctrine\\Common\\Collections\\' => 28,
             'Doctrine\\Common\\Cache\\' => 22,
             'Doctrine\\Common\\Annotations\\' => 28,
             'Doctrine\\Common\\' => 16,
@@ -261,10 +260,6 @@ class ComposerStaticInitc69050299f61ebe269508b29e7cb824b
         array (
             0 => __DIR__ . '/..' . '/doctrine/inflector/lib/Doctrine/Common/Inflector',
         ),
-        'Doctrine\\Common\\Collections\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/doctrine/collections/lib/Doctrine/Common/Collections',
-        ),
         'Doctrine\\Common\\Cache\\' => 
         array (
             0 => __DIR__ . '/..' . '/doctrine/cache/lib/Doctrine/Common/Cache',
@@ -275,10 +270,7 @@ class ComposerStaticInitc69050299f61ebe269508b29e7cb824b
         ),
         'Doctrine\\Common\\' => 
         array (
-            0 => __DIR__ . '/..' . '/doctrine/reflection/lib/Doctrine/Common',
-            1 => __DIR__ . '/..' . '/doctrine/event-manager/lib/Doctrine/Common',
-            2 => __DIR__ . '/..' . '/doctrine/persistence/lib/Doctrine/Common',
-            3 => __DIR__ . '/..' . '/doctrine/common/lib/Doctrine/Common',
+            0 => __DIR__ . '/..' . '/doctrine/common/lib/Doctrine/Common',
         ),
         'Composer\\Semver\\' => 
         array (
@@ -333,6 +325,10 @@ class ComposerStaticInitc69050299f61ebe269508b29e7cb824b
             array (
                 0 => __DIR__ . '/..' . '/doctrine/lexer/lib',
             ),
+            'Doctrine\\Common\\Collections\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/doctrine/collections/lib',
+            ),
         ),
         'C' => 
         array (
@@ -374,11 +370,11 @@ class ComposerStaticInitc69050299f61ebe269508b29e7cb824b
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitc69050299f61ebe269508b29e7cb824b::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitc69050299f61ebe269508b29e7cb824b::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInitc69050299f61ebe269508b29e7cb824b::$prefixesPsr0;
-            $loader->fallbackDirsPsr0 = ComposerStaticInitc69050299f61ebe269508b29e7cb824b::$fallbackDirsPsr0;
-            $loader->classMap = ComposerStaticInitc69050299f61ebe269508b29e7cb824b::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit9e47a19e865e200aea498ca8215c26de::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit9e47a19e865e200aea498ca8215c26de::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit9e47a19e865e200aea498ca8215c26de::$prefixesPsr0;
+            $loader->fallbackDirsPsr0 = ComposerStaticInit9e47a19e865e200aea498ca8215c26de::$fallbackDirsPsr0;
+            $loader->classMap = ComposerStaticInit9e47a19e865e200aea498ca8215c26de::$classMap;
 
         }, null, ClassLoader::class);
     }
