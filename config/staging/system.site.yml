@@ -1,7 +1,7 @@
 uuid: 9ec92b3b-795e-40e1-a3cb-347796238126
-name: 'awsd8 local site'
+name: 'awsd8 local now'
 mail: atxajon@gmail.com
-slogan: 'Where i am going to sync my local config into live'
+slogan: 'Slogan config change'
 page:
   403: ''
   404: ''
