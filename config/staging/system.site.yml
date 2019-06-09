@@ -1,7 +1,7 @@
 uuid: 9ec92b3b-795e-40e1-a3cb-347796238126
-name: 'awsd8 local now'
+name: awsd8
 mail: atxajon@gmail.com
-slogan: 'Slogan config change'
+slogan: ''
 page:
   403: ''
   404: ''
